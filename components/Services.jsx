@@ -40,7 +40,7 @@ export default function Services() {
             </div>
             <div className={css.feature}>
                 <div className={css.ImageWrapper}>
-                    <Image src={s1} alt="" objectFit='cover' 
+                    <Image src={s3} alt="" objectFit='cover' 
                     layout='intrinsic' />
                 </div>
 
