@@ -52,3 +52,15 @@ a {
   transition: all 300ms ease;
 
 }
+
+.btn {
+  width: max-content;
+  padding: 1rem;
+  border-radius: 4rem;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: var(--themeRed);
+  margin-left: 30px;
+}
