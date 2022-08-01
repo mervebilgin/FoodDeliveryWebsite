@@ -4,19 +4,26 @@ import Layout from "../components/Layout";
 import { urlFor } from "../lib/client"
 import css from '../styles/Cart.module.css'
 import toast, {Toaster} from 'react-hot-toast';
+import {useState} from "react";
+import OrderModal from '../components/OrderModal';
 
 export default function Cart() {
     const CartData = useStore((state)=>state.cart);
-    const removePizza = useStore((state)=>state.removePizza)
-
+    const removePizza = useStore((state)=>state.removePizza);
+    const [PaymentMethod, setPaymentMethod] = useState(null);
 
     const handleRemove = (i)=>{
         removePizza(i)
-        toast.error('Item Removed')
+        toast.error('Item Removed');
     }
 
     const total = () => CartData.pizzas.reduce((a, b)=>a+b.quantity * b.price, 0)
  
+    const handleOnDelivery = ()=> {
+        setPaymentMethod(0);
+        typeof window !== 'undefined' && localStorage.setItem('total', total())
+    }
+
     return(
         <Layout>
            <div className={css.container}>
@@ -112,16 +119,21 @@ export default function Cart() {
                     </div>
 
                     <div className={css.buttons}>
-                            <button className='btn'>Pay on Delivery</button>
+                            <button className='btn' onClick={handleOnDelivery}>Pay on Delivery</button>
                             <button className='btn'>Pay Now</button>
                     </div>
-                    
-
                 </div>
-            
             </div> 
+
             <Toaster/>
 
+            {/* Modal */}
+            <OrderModal
+            opened = {PaymentMethod === 0}
+            setOpened = {setPaymentMethod}
+            PaymentMethod = {PaymentMethod}
+            />
+            
         </Layout>
     )
     
