@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Food Delivery Website
+
+Full Stack Food/Pizza React distribution application has been made in this Nextjs React project. In the project I used React hooks, modern CSS, global state management with Zustand, Stripe payment integration and more. I also developed cash on delivery payment method to make this site more functional and practical.
 
 ## Getting Started
 
@@ -32,3 +34,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Sanity
+* Content creation and management platform 
+* Content is data: Sanity.io is the unified content platform that powers better digital experiences
+* Sanity is the most flexible platform for building data driven content solutions.
+
+![image](https://user-images.githubusercontent.com/47225405/182386748-0f0b040d-7fe5-4b18-857d-b4fd248b76da.png)
+
+## Stripe: 
+Online payment system
+Payments infrastructure for the internet Millions of businesses of all sizes—from startups to large enterprises—use Stripe’s software and APIs to accept payments, send payouts, and manage their businesses online.
+
+![image](https://user-images.githubusercontent.com/47225405/182386548-e2d2731c-d69c-430b-9990-7c0a04bf6c24.png)
