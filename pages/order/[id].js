@@ -14,10 +14,10 @@ export const getServerSideProps = async( {params})=> {
 
     return {
         props: {
-            order: order[0]
-        }
-    }
-}
+            order: order[0],
+        },
+    };
+};
 
 export default function Orders({order}) {
 
@@ -59,6 +59,7 @@ export default function Orders({order}) {
                         <span>$ {order.total}</span>
                     </div>
                 </div>
+                
                 <div className={css.statusContainer}>
                     <div className={css.status}>
                         <UilBill width={50} height={50}/>
@@ -68,7 +69,12 @@ export default function Orders({order}) {
                         ) : (
                             <span className={css.completed}>Completed</span>
                         )}
+
+                        {/* {order.status> 1 && (
+                            <span className={css.completed}>Completed</span>
+                        )} */}
                     </div>
+
 
                     <div className={css.status}>
                         <Image src={Cooking} alt="" width={50} height={50} />
