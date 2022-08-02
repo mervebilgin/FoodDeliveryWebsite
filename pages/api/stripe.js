@@ -4,6 +4,11 @@ const stripe = new Stripe(
     "sk_test_51LS6ZBBoOYcx7qwhvkxT3lUVR7lsBDlHhS43dsQod3Ug0pisv3jikqacs4r5DMwoz1ZvG6phLN2vyZKs8QVWfNR800P7bMeboM"
 )
 
+/*
+Sanity: Content creation and management platform 
+Stripe: online payment system
+*/
+
 export default async function handler(req, res) {
     if (req.method == 'POST')
     {

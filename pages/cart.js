@@ -30,6 +30,8 @@ export default function Cart() {
         typeof window !== 'undefined' && localStorage.setItem('total', total())
     }
 
+
+    // ******
     const handleCheckout = async()=>{
         typeof window !== 'undefined' && localStorage.setItem('total', total())
         setPaymentMethod(1);
@@ -142,12 +144,14 @@ export default function Cart() {
                         </div>
                     </div>
 
+{/* // --- */}
                     {!Order && CartData.pizzas.length > 0 ? (
                         <div className={css.buttons}>
                             <button className="btn" onClick={handleOnDelivery}>Pay on Delivery</button>
                             <button className="btn" onClick={handleCheckout}>Pay Now</button>
+                            {/*  onClick={handleCheckout} */}
                         </div>
-                    ) : null}
+                    ) : null} 
                     
                 </div>
             </div> 

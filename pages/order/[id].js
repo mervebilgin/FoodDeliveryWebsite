@@ -5,7 +5,7 @@ import Cooking from '../../assets/cooking.png'
 import Onway from '../../assets/onway.png'
 import Spinner from '../../assets/spinner.svg'
 import {UilBill, UilBox} from '@iconscout/react-unicons'
-import Image from 'next//image'
+import Image from 'next/image'
 import { useEffect } from 'react'
 
 export const getServerSideProps = async( {params})=> {
